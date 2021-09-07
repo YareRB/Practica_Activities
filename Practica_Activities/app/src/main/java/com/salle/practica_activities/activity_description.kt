@@ -49,13 +49,13 @@ class activity_description : AppCompatActivity() {
         txvDescription.setText(image.info!!.description)
 
         var imageFavorite : Int = getPreferences()
+
         if(imageFavorite == image.id){
             imgFavorite.setImageResource(R.drawable.ic_favorite)
         }else{
             imgFavorite.setImageResource(R.drawable.ic_no_favorite)
         }
     }
-
 
     private fun listeners() {
         imgObjectD.setOnClickListener() {
