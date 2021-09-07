@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Practica_Activities</string>
+    <string name="text_more_description">Description</string>
+    <string name="text_description">Image\'s description</string>
+
+
+
+    <string name="text_cerdo">En la imagen se ve un cerdito :)</string>
+    <string name="text_android">"Android es un sistema operativo para dispositivos móviles "</string>
+    <string name="text_facebook">Facebook es una red social, que permite interactuar y conocer personas</string>
+</resources>
