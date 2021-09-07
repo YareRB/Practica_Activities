@@ -8,4 +8,11 @@
     <string name="text_cerdo">En la imagen se ve un cerdito :)</string>
     <string name="text_android">"Android es un sistema operativo para dispositivos móviles "</string>
     <string name="text_facebook">Facebook es una red social, que permite interactuar y conocer personas</string>
+    <string name="text_oso">El oso es muy cariño, te manda un abrazo</string>
+    <string name="tetx_girafa">La girafa tiene su cuello muy largo y alcanza los arboles</string>
+    <string name="text_pez">El pez vive en el  mar y hay de muchos colores :)</string>
+    <string name="text_perro">El perro es el mejor amigo del hombre, hay de distintas razas</string>
+    <string name="text_linux">Es un sistema open source, el logo es un pinguino</string>
+    <string name="text_netflix">Si deseas ver series o peliculas, Netflix es la opcion correcta :)</string>
+    <string name="text_windows">Windows es un sistema operativo :)</string>
 </resources>
