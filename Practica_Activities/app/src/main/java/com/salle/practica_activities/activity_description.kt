@@ -22,9 +22,7 @@ class activity_description : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_description)
-
         preferences = getSharedPreferences(PREFS, Context.MODE_PRIVATE) //cuales son preferencias
-
         InitView()
     }
 
@@ -45,8 +43,8 @@ class activity_description : AppCompatActivity() {
      }
 
     private fun showInformation() {
-        imgObjectD.setImageResource(image.info!!.resource)
-        txvDescription.setText(image.info!!.description)
+        imgObjectD.setImageResource(image.imageResource!!)
+        txvDescription.setText(image.info!!)
 
         var imageFavorite : Int = getPreferences()
 

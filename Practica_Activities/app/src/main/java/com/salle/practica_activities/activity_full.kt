@@ -23,7 +23,7 @@ class activity_full : AppCompatActivity() {
 
         image = intent.getParcelableExtra("Image")?: Image()
 
-        imgObjectFull.setImageResource(image.info!!.resource)
+        imgObjectFull.setImageResource(image.imageResource!!)
     }
 
 

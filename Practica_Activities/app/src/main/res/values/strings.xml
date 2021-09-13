@@ -4,7 +4,6 @@
     <string name="text_description">Image\'s description</string>
 
 
-
     <string name="text_cerdo">En la imagen se ve un cerdito :)</string>
     <string name="text_android">"Android es un sistema operativo para dispositivos móviles "</string>
     <string name="text_facebook">Facebook es una red social, que permite interactuar y conocer personas</string>
@@ -15,4 +14,6 @@
     <string name="text_linux">Es un sistema open source, el logo es un pinguino</string>
     <string name="text_netflix">Si deseas ver series o peliculas, Netflix es la opcion correcta :)</string>
     <string name="text_windows">Windows es un sistema operativo :)</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

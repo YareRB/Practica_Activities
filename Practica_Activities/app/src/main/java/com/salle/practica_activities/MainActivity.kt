@@ -8,17 +8,19 @@ import android.widget.ImageView
 
 class MainActivity : AppCompatActivity() {
 
-    private var image: Image = Image()
+    //private var image: Image = Image()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //FRAGMENTS
         setContentView(R.layout.activity_main)
-
-        initView()
-        setImage()
+        supportFragmentManager.beginTransaction().add(R.id.container, MainFragment()).commit()
+        //initView()
+        //setImage()
     }
 
-    private lateinit var imgObject: ImageView
+    //ACTIVITY
+    /*private lateinit var imgObject: ImageView
     private lateinit var btnBack: ImageView
     private lateinit var btnNext: ImageView
     private lateinit var btnMoreInfo: Button
@@ -77,6 +79,6 @@ class MainActivity : AppCompatActivity() {
                 putExtra("Image", image)
             })
         }
-    }
+    }*/
 
 }
