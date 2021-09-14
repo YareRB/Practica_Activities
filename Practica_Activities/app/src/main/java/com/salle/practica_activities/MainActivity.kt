@@ -10,14 +10,30 @@ class MainActivity : AppCompatActivity() {
 
     //private var image: Image = Image()
 
+    //STATE
+    private val KEY = "STATE_KEY"
+    private var principalFragment: Boolean = true
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //FRAGMENTS
         setContentView(R.layout.activity_main)
-        supportFragmentManager.beginTransaction().add(R.id.container, MainFragment()).commit()
+
+        principalFragment = savedInstanceState?.getBoolean(KEY, true) ?: true
+        if (principalFragment)
+            supportFragmentManager.beginTransaction().add(R.id.container, MainFragment()).commit()
         //initView()
         //setImage()
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+
+        outState.run {
+            putBoolean(KEY, false)
+        }
+        super.onSaveInstanceState(outState)
+    }
+
 
     //ACTIVITY
     /*private lateinit var imgObject: ImageView
