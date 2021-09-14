@@ -10,13 +10,11 @@ import androidx.fragment.app.Fragment
 import com.squareup.moshi.Moshi
 import android.media.MediaPlayer
 import android.widget.Toast
-import android.media.MediaPlayer.create as create1
-import android.media.MediaPlayer.create as create2
+
 
 class MainFragment : Fragment(R.layout.fragment_main) {
 
-    private var image: Image = Image() //imagen actual
-    private var soundFavorite : Image = Image() // sonido favorito
+    private var image: Image = Image()
 
     private val PREFS = "MY_PREFERENCES"
     private val SOUND_PREFS = "SOUNDS_FAV"
@@ -29,15 +27,11 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         preferences = activity?.getSharedPreferences(PREFS, Context.MODE_PRIVATE)!!
-
         initView()
 
     }
 
-
-    //ACTIVITY
     private lateinit var imgObject: ImageView
     private lateinit var btnBack: ImageView
     private lateinit var btnNext: ImageView
@@ -65,7 +59,6 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                 sound = it.sound
             }
         }
-
         showImageNow()
     }
 
@@ -117,7 +110,8 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
             if(soundFavorite >-1 && soundFavorite < 11)
             { playSound(Sounds[soundFavorite].sound)
-                Toast.makeText(requireContext(), "El sonido favorito es de la imagen llamada: ${Sounds[soundFavorite].imagename}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "El sonido favorito es de la imagen llamada: " +
+                        "${Sounds[soundFavorite].imagename}", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -129,8 +123,6 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             activity?.supportFragmentManager?.beginTransaction()?.apply  {
                 setCustomAnimations(
                     R.anim.slide_in_right,
-                    //R.anim.slide_out_left,
-                    //R.anim.slide_in_left,
                     R.anim.slide_out_right
                 )
                 replace(R.id.container, imageFragment)
@@ -138,7 +130,6 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                 commit()
             }
     }
-
 
     private fun getSoundPreferences() =
         preferences.getString(SOUND_PREFS, null)?.let {
@@ -148,4 +139,5 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                 -1
             }
         } ?: -1
+
 }

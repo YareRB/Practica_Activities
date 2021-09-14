@@ -1,16 +1,11 @@
 package com.salle.practica_activities
 
-import android.content.Intent
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageView
 
 class MainActivity : AppCompatActivity() {
 
-    //private var image: Image = Image()
-
-    //STATE
     private val KEY = "STATE_KEY"
     private var principalFragment: Boolean = true
 
@@ -22,18 +17,15 @@ class MainActivity : AppCompatActivity() {
         principalFragment = savedInstanceState?.getBoolean(KEY, true) ?: true
         if (principalFragment)
             supportFragmentManager.beginTransaction().add(R.id.container, MainFragment()).commit()
-        //initView()
-        //setImage()
+
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
-
         outState.run {
             putBoolean(KEY, false)
         }
         super.onSaveInstanceState(outState)
     }
-
 
     //ACTIVITY
     /*private lateinit var imgObject: ImageView
