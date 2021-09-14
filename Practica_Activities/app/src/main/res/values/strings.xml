@@ -16,4 +16,6 @@
     <string name="text_windows">Windows es un sistema operativo :)</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_sonido">Sonido</string>
+    <string name="txt_Image">Imagen</string>
 </resources>

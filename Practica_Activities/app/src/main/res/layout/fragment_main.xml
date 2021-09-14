@@ -1,63 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clcMain"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity"
+        android:layout_weight="1">
 
         <ImageView
             android:id="@+id/imgObject"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:src="@drawable/oso"
+            android:layout_width="226dp"
+            android:layout_height="235dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.342" />
+            app:layout_constraintVertical_bias="0.129" />
 
         <ImageView
             android:id="@+id/btnBack"
             android:layout_width="58dp"
             android:layout_height="69dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="244dp"
+            android:layout_marginTop="76dp"
             android:src="@drawable/ic_back"
-            app:layout_constraintEnd_toStartOf="@+id/btnNext"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintEnd_toStartOf="@+id/btnMoreInfo"
+            app:layout_constraintHorizontal_bias="0.34"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imgObject" />
 
         <ImageView
             android:id="@+id/btnNext"
-            android:layout_width="69dp"
-            android:layout_height="73dp"
-            android:layout_marginTop="28dp"
+            android:layout_width="59dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="76dp"
             android:layout_marginEnd="4dp"
             android:src="@drawable/ic_next"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.604"
+            app:layout_constraintStart_toEndOf="@+id/btnMoreInfo"
             app:layout_constraintTop_toBottomOf="@+id/imgObject" />
 
         <Button
             android:id="@+id/btnMoreInfo"
             android:layout_width="200dp"
             android:layout_height="66dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="76dp"
             android:drawableLeft="@drawable/ic_read_more"
             android:text="@string/text_more_description"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imgObject" />
+
+        <ImageView
+            android:id="@+id/playSound"
+            android:layout_width="74dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_sound"
+            app:layout_constraintBottom_toTopOf="@+id/btnMoreInfo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgObject"
+            app:layout_constraintVertical_bias="0.3" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
