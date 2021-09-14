@@ -49,9 +49,9 @@ class activity_description : AppCompatActivity() {
         var imageFavorite : Int = getPreferences()
 
         if(imageFavorite == image.id){
-            imgFavorite.setImageResource(R.drawable.ic_favorite)
+            imgFavorite.setImageResource(R.drawable.ic_image_favorite)
         }else{
-            imgFavorite.setImageResource(R.drawable.ic_no_favorite)
+            imgFavorite.setImageResource(R.drawable.ic_image_no_favorite)
         }
     }
 
